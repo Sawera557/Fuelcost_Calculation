@@ -1,5 +1,3 @@
-Here's a **well-structured README** for your Django API project. This will help reviewers understand and test your project easily.  
-
 ---
 
 # 🚀 **Fuel Optimizer API**
