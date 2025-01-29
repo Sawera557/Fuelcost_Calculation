@@ -27,7 +27,7 @@ ORS_API_KEY = "5b3ce3597851110001cf6248460de11b94aa4ebeb892fc8932ba3a3b"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
