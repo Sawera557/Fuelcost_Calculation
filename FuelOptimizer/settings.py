@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-9b8+sfn-j9m67_l4@v^hbu1f!+x7l@@v_=5d5+44$qk%$yc^vu'
 
-ORS_API_KEY = ""
+ORS_API_KEY = "5b3ce3597851110001cf6248460de11b94aa4ebeb892fc8932ba3a3b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'FuelOptimizer.urls'
@@ -81,6 +84,13 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "https://679a3a4dcbc5461507b33470--loquacious-beijinho-79fbfc.netlify.app",
+]
+
+# Allow all for development (NOT recommended for production)
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Password validation
